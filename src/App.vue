@@ -13,7 +13,7 @@
     <h1 class="text-6xl md:text-8xl font-bold text-white drop-shadow-md animate-pulse font-japanese">{{ title }}
     </h1>
     <div class="text-9xl mb-6 animate-bounce-slow">{{ emoji }}</div>
-    <div class="flex gap-4 text-gray-200 text-4xl md:text-6xl animate-fade-in">
+    <div class="flex gap-4 text-gray-00 text-4xl md:text-6xl animate-fade-in">
       <div class="flex flex-col items-center">
         <span class="animate-count text-white">{{ countdown.days }}</span>
         <span class="text-sm md:text-lg">days</span>
@@ -159,8 +159,8 @@ watch(title, (newTitle) => {
   document.title = newTitle;
 });
 
-let intervalId;
-let weeklyNotificationIntervalId;
+let intervalId: number;
+let weeklyNotificationIntervalId: number;
 
 onMounted(() => {
   updateCountdown();
